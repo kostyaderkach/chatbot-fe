@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
-    <title>ChatGPT с Google Sheets</title>
+    <title>Improved smart bot</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Спроси у ChatGPT</h1>
+        <h1>Smarty GPT</h1>
         <input type="text" id="question" placeholder="Введіть запит">
-        <button id="askButton" onclick="askQuestion()">Спросить</button>
+        <button id="askButton" onclick="askQuestion()">Ask your questions 🚀</button>
         <div id="responseContainer" class="response-container">
             <p id="response"></p>
         </div>
@@ -25,7 +25,7 @@
 
             if (!question) {
                 responseContainer.classList.add("show");
-                responseElement.innerHTML = "<span class='error'>Пожалуйста, введите вопрос!</span>";
+                responseElement.innerHTML = "<span class='error'>You haven't asked question</span>";
                 return;
             }
 
@@ -57,7 +57,7 @@
     </script>
     <script>
         const input = document.getElementById("question");
-        const texts = ["Введите ваш вопрос...", "Система анализирует...", "AI ждет вашего запроса..."]; // Тексты для placeholder
+        const texts = ["Шо ти голова?😁", "Какой сегодня цвет года?😂", "Диназавтры были до нашей эры или после?🦖"]; // Тексты для placeholder
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
