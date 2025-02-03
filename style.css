@@ -1,5 +1,6 @@
 /* Основной фон страницы */
 body {
+    font-family: 'Roboto', sans-serif;
     background-color: #121212; /* Тёмно-серый фон */
     display: flex;
     justify-content: center;
