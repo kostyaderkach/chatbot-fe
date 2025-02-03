@@ -10,10 +10,11 @@ body {
 
 /* Окно с чатом */
 .container {
-    background-color: rgb(110, 49, 170); /* Тёмный фон блока */
+    background-color: rgb(24, 22, 34); /* Тёмный фон блока */
+    border: rgb(110, 49, 170);
     color: #e0e0e0;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     width: 400px;
     text-align: center;
