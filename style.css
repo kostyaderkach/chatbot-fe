@@ -1,6 +1,9 @@
 /* Основной фон страницы */
 body {
     font-family: 'Roboto', sans-serif;
+    background-image: url('grid--dark.svg');
+    background-repeat: repeat;  /* Повторение в обеих осях */
+    background-size: auto;
     background-color: #121212; /* Тёмно-серый фон */
     display: flex;
     justify-content: center;
