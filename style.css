@@ -1,6 +1,7 @@
 /* Основной фон страницы */
 body {
-    font-family: 'VT323', monospace;
+    font-family: 'Courier New', 'IBM Plex Mono', monospace;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
     color: lime;
     background-image: url('grid--dark.svg');
     background-repeat: repeat;  /* Повторение в обеих осях */
@@ -38,7 +39,7 @@ input {
     margin: 10px 0;
     border: 1px solid rgb(110, 49, 170);
     background-color: rgb(24, 22, 34);
-    color: #e0e0e0;
+    color: lime;
     border-radius: 5px;
     font-size: 16px;
     transition: 0.3s;
