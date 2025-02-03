@@ -55,5 +55,35 @@
             document.getElementById("askButton").disabled = false;
         }
     </script>
+    <script>
+        const input = document.getElementById("question");
+        const texts = ["Введите ваш вопрос...", "Система анализирует...", "AI ждет вашего запроса..."]; // Тексты для placeholder
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+    
+        function typeEffect() {
+            const currentText = texts[textIndex];
+            if (isDeleting) {
+                input.placeholder = currentText.substring(0, charIndex--);
+            } else {
+                input.placeholder = currentText.substring(0, charIndex++);
+            }
+    
+            if (!isDeleting && charIndex === currentText.length + 1) {
+                isDeleting = true;
+                setTimeout(typeEffect, 1000); // Пауза перед удалением
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length; // Меняем текст
+                setTimeout(typeEffect, 500);
+            } else {
+                setTimeout(typeEffect, isDeleting ? 50 : 100); // Скорость набора и удаления
+            }
+        }
+    
+        typeEffect(); // Запускаем эффект
+    </script>
+    
 </body>
 </html>
