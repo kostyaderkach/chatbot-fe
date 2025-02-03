@@ -16,15 +16,17 @@ body {
 
 /* Окно с чатом */
 .container {
-    background-color: rgb(24, 22, 34); /* Тёмный фон блока */
-    border: 1px solid rgb(110, 49, 170); /* Фиолетовая рамка */
+    background-color: rgb(24, 22, 34);
+    border: 1px solid rgb(110, 49, 170);
     color: #e0e0e0;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     width: 400px;
     text-align: center;
+    box-sizing: border-box; /* Исправляет проблему с границами */
 }
+
 
 /* Заголовок */
 h1 {
