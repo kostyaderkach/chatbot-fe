@@ -17,7 +17,7 @@ body {
 /* Окно с чатом */
 .container {
     background-color: rgb(24, 22, 34); /* Тёмный фон блока */
-    border: 1px solid rgb(110, 49, 170);
+    border: 1px solid rgb(110, 49, 170); /* Фиолетовая рамка */
     color: #e0e0e0;
     padding: 20px;
     border-radius: 12px;
@@ -45,6 +45,12 @@ input {
     transition: 0.3s;
 }
 
+/* Цвет плейсхолдера */
+input::placeholder {
+    color: lime;
+    opacity: 0.7;
+}
+
 input:focus {
     border-color: #007bff;
     outline: none;
@@ -55,23 +61,28 @@ input:focus {
 button {
     width: 100%;
     padding: 12px;
-    background-color: rgb(28, 54, 42);
-    color: rgb(149, 208, 180);
+    background-color: rgb(110, 49, 170); /* Фиолетовый цвет (как у рамки контейнера) */
+    color: white; /* Белый текст */
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
+/* Эффект при наведении */
+button:hover {
+    background-color: rgb(130, 60, 200); /* Чуть светлее */
+    box-shadow: 0 0 10px rgba(110, 49, 170, 0.7);
+}
 
+/* Кнопка в неактивном состоянии */
 button:disabled {
-    background-color: rgb(28, 54, 42);
+    background-color: rgb(80, 30, 130); /* Темнее */
     cursor: not-allowed;
+    opacity: 0.6;
 }
-input::placeholder {
-    color: lime;
-    opacity: 0.7; /* Можно регулировать прозрачность */
-}
+
 /* Ответ */
 .response-container {
     margin-top: 20px;
