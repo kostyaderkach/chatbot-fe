@@ -67,7 +67,7 @@
             if (isDeleting) {
                 input.placeholder = currentText.substring(0, charIndex--);
             } else {
-                input.placeholder = currentText.substring(0, charIndex++);
+                input.placeholder = currentText.substring(0, charIndex++) + "_";
             }
     
             if (!isDeleting && charIndex === currentText.length + 1) {
